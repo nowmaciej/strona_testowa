@@ -1,0 +1,25 @@
+.kontener {
+    display: grid;  
+    grid-template:
+	"naglowek" minmax(1em, auto)
+	"tablica" minmax(1em, auto)
+	"edytor" minmax(1em, auto)
+	/1fr; 
+	grid-gap: 0.25em;
+}
+
+.kontener > div {
+    border: 1px solid darkgray;
+}
+
+.naglowek {
+    grid-area: naglowek;
+}
+
+.tablica {
+    grid-area: tablica;
+}
+
+.edytor {
+    grid-area: edytor;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pogoda i Zanieczyszczenie - Podłęże</title>
+	  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  </head>
+  <body>
+    <div id="container">
+      <div class="tytul">	
+        <h1>Podłęże</h1>
+        <p><%= desc %></p>
+      </div>
+      <div class="czystosc">
+      <% if(pm1 !== null){ %>
+            <p>PM<sub>1</sub>: <span class="wartosc"><%= pm1 %> </span> μg/m<sup>3</sup></p>
+            <p>PM<sub>2.5</sub>: <span class="wartosc"><%= pm25*4 %> </span> %</p>
+            <p>PM<sub>10</sub>: <span class="wartosc"><%= pm10*2 %> </span> %</p>
+          <% } %>
+
+          <% if(error !== null){ %>
+            <p><%= error %></p>
+          <% } %>
+      </div>
+      <div class="temperatura">
+          <% if(pm1 !== null){ %>
+        <p>Temperatura: <span class="wartosc"><%= temperatura %> </span> <sup>o</sup>C</p>
+        <p>Wilgotność: <span class="wartosc"><%= wilgotnosc %> </span> %</p>
+        <p>Ciśnienie: <span class="wartosc"><%= cisnienie %> </span> hPa</p>
+          <% } %>
+      </div>
+      <div class="stopka">
+        <p><%= info %></p>
+      </div>
+    </div>
+  </body>
+</html>
